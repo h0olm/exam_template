@@ -53,6 +53,11 @@ class Grid:
             self.set(j, 0, self.wall)
             self.set(j, self.height - 1, self.wall)
 
+    def inner_walls(self):
+        posListY = [3, 4, 5, 3, 3, 3]
+        posListX = [3, 3, 3, 4, 5, 6]
+        for y, x in zip(posListY, posListX):
+            self.set(y, x, self.wall)
 
     # Används i filen pickups.py
     def get_random_x(self):
